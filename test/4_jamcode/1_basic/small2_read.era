@@ -1,0 +1,23 @@
+var a: int;
+
+read(a);
+
+a := a + 100;
+
+var b : int;
+b := 3;
+
+b := b + 1;
+
+while b <= 10; do
+	b := b + 2;
+od;
+
+print(b);
+
+a := a * b;
+
+print(b,b);
+
+print(a);
+

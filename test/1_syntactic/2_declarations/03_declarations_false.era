@@ -1,0 +1,3 @@
+// declaration without ending semicolon
+var i: int
+x := 1;

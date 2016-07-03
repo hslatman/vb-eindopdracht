@@ -1,0 +1,3 @@
+// no 'od' keyword
+while 2<3; do
+	2-6;

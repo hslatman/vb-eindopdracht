@@ -1,0 +1,15 @@
+
+var c : bool;
+
+
+c :=  {var a: bool; read(a);
+
+	a := !a;
+	
+	print(a);
+	var b: bool; read(b);
+	print(b);
+	(a && !b) || (!a && b);
+};
+
+print(c);

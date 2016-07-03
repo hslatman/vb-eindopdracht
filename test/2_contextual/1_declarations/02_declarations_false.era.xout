@@ -1,0 +1,1 @@
+[BECOMES (x -> 2:0)] ERROR: x was not declared before!

@@ -1,0 +1,7 @@
+var a: int;
+var b: int;
+
+a := 3;
+b := 4;
+
+if a != b; then print(a); else print(b); fi;

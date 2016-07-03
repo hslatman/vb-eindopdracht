@@ -1,0 +1,55 @@
+           PUSH         1              ; push variable c on the stack
+           LOADL        0              ; load init value of c
+           STORE(1)     0[SB]          ; store in variable c
+           PUSH         1              ; push variable a on the stack
+           LOADL        0              ; load init value of a
+           STORE(1)     1[SB]          ; store in variable a
+           LOADA        1[SB]          ; load the address of a
+           CALL         getint         ; read a numeric value for a
+           LOAD(1)      1[SB]          ; load the variable a
+           POP(0)       1              ; pop the resulting value of indent dsb cleanup
+           LOAD(1)      1[SB]          ; load the variable a
+           CALL         not            ; negate the statement
+           STORE(1)     1[SB]          ; store in variable a
+           LOAD(1)      1[SB]          ; load the variable a on the stack
+           POP(0)       1              ; pop the resulting value of indent dsb cleanup
+           LOAD(1)      1[SB]          ; load the variable a
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of indent dsb cleanup
+           PUSH         1              ; push variable b on the stack
+           LOADL        0              ; load init value of b
+           STORE(1)     2[SB]          ; store in variable b
+           LOADA        2[SB]          ; load the address of b
+           CALL         getint         ; read a numeric value for b
+           LOAD(1)      2[SB]          ; load the variable b
+           POP(0)       1              ; pop the resulting value of indent dsb cleanup
+           LOAD(1)      2[SB]          ; load the variable b
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of indent dsb cleanup
+           LOAD(1)      1[SB]          ; load the variable a
+           LOAD(1)      2[SB]          ; load the variable b
+           CALL         not            ; negate the statement
+           CALL         and            ; and the values on the top of the stack with eachother
+           LOAD(1)      1[SB]          ; load the variable a
+           CALL         not            ; negate the statement
+           LOAD(1)      2[SB]          ; load the variable b
+           CALL         and            ; and the values on the top of the stack with eachother
+           CALL         or             ; or the values on the top of the stack with eachother
+           POP(1)       2              ; pop 2 local variables on closing a scope
+           STORE(1)     0[SB]          ; store in variable c
+           LOAD(1)      0[SB]          ; load the variable c on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      0[SB]          ; load the variable c
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           POP(0)       1              ; free 1 variables at end of program
+           HALT                        ; ends the program

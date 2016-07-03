@@ -1,0 +1,1246 @@
+
+.source Test_two.jasm
+.class public Test_two
+.super java/lang/Object
+
+; standard class initializer
+.method public <init>()V
+	aload_0
+	invokenonvirtual java/lang/Object/<init>()V
+	return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+	.limit locals 10
+	.limit stack 208
+
+
+	; 'start' of generated code
+
+	ldc 112
+	istore 0
+	ldc 5
+	istore 1
+	ldc 1
+	istore 2
+
+	; loading of variable/constant character
+	iload 0
+	dup
+	i2c
+	invokestatic java/lang/String/valueOf(C)Ljava/lang/String;
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+
+
+	; loading of a variable/constant
+	iload 1
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+
+	; loading of a variable/constant
+	iload 2
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 1 value from the stack for cleaning up print
+	pop
+	ldc 97
+	istore 3
+	ldc 0
+	istore 4
+	ldc 0
+	istore 5
+
+	; loading of variable/constant character
+	iload 3
+	dup
+	i2c
+	invokestatic java/lang/String/valueOf(C)Ljava/lang/String;
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+
+
+	; loading of a variable/constant
+	iload 4
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+
+	; loading of a variable/constant
+	iload 5
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 1 value from the stack for cleaning up print
+	pop
+	ldc 3
+
+	; loading of a variable/constant
+	iload 1
+	ldc 2
+	imul
+	iadd
+	istore 6
+
+	; loading of a variable/constant
+	iload 2
+
+	; processing the NOT operation
+	iconst_1
+	ixor
+
+	; loading of a variable/constant
+	iload 4
+	ldc 2
+
+	; less-than statement
+	if_icmplt LabelLT0
+	iconst_0
+	goto LabelLT1
+
+LabelLT0:
+	iconst_1
+
+LabelLT1:
+	ior
+	istore 7
+
+	; loading of a variable/constant
+	iload 6
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; loading of a variable/constant
+	iload 7
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+	ldc 114
+	istore 3
+	iload 3
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+	ldc 3
+	istore 4
+	iload 4
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+	ldc 0
+	istore 5
+	iload 5
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of variable/constant character
+	iload 3
+	dup
+	i2c
+	invokestatic java/lang/String/valueOf(C)Ljava/lang/String;
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+
+
+	; loading of a variable/constant
+	iload 4
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+
+	; loading of a variable/constant
+	iload 5
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 1 value from the stack for cleaning up print
+	pop
+	ldc 0
+	istore 8
+	ldc 6
+	istore 8
+	iload 8
+	istore 4
+	iload 4
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of a variable/constant
+	iload 8
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; loading of a variable/constant
+	iload 4
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+	ldc 2
+	ldc 3
+
+	; loading of a variable/constant
+	iload 1
+	imul
+	iadd
+
+	; loading of a variable/constant
+	iload 4
+	isub
+	istore 4
+	iload 4
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+	ldc 10
+
+	; loading of a variable/constant
+	iload 4
+
+	; greater-than statement
+	if_icmpgt LabelGT2
+	iconst_0
+	goto LabelGT3
+
+LabelGT2:
+	iconst_1
+
+LabelGT3:
+
+	; loading of a variable/constant
+	iload 2
+	iand
+	istore 5
+	iload 5
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of a variable/constant
+	iload 4
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; loading of a variable/constant
+	iload 5
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+	ldc 122
+	dup
+	i2c
+	invokestatic java/lang/String/valueOf(C)Ljava/lang/String;
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+
+	istore 3
+	iload 3
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of a variable/constant
+	iload 8
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+	ldc 1
+	iadd
+	istore 4
+	iload 4
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+	ldc 1
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; processing the NOT operation
+	iconst_1
+	ixor
+	istore 5
+	iload 5
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of variable/constant character
+	iload 3
+	dup
+	i2c
+	invokestatic java/lang/String/valueOf(C)Ljava/lang/String;
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+
+
+	; loading of a variable/constant
+	iload 4
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+
+	; loading of a variable/constant
+	iload 5
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 1 value from the stack for cleaning up print
+	pop
+	ldc 16
+	ldc 2
+	ldc 8
+	ineg
+	imul
+	ldc 2
+	idiv
+	iadd
+	ldc 19
+	ldc 3
+	irem
+	iadd
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+	ldc 5
+	ldc 3
+
+	; less-than statement
+	if_icmplt LabelLT4
+	iconst_0
+	goto LabelLT5
+
+LabelLT4:
+	iconst_1
+
+LabelLT5:
+
+	; loading of a variable/constant
+	iload 4
+
+	; loading of a variable/constant
+	iload 8
+
+	; equals statement
+	if_icmpeq LabelEQ6
+	iconst_0
+	goto LabelEQ7
+
+LabelEQ6:
+	iconst_1
+
+LabelEQ7:
+	iand
+
+	; loading of a variable/constant
+	iload 4
+	ldc 4
+
+	; greater-equals statement
+	if_icmpge LabelGE8
+	iconst_0
+	goto LabelGE9
+
+LabelGE8:
+	iconst_1
+
+LabelGE9:
+	ior
+	ldc 8
+
+	; loading of a variable/constant
+	iload 8
+
+	; less-equals statement
+	if_icmple LabelLE10
+	iconst_0
+	goto LabelLE11
+
+LabelLE10:
+	iconst_1
+
+LabelLE11:
+
+	; loading of a variable/constant
+	iload 8
+	ldc 10
+
+	; not-equals statement
+	if_icmpne LabelNE12
+	iconst_0
+	goto LabelNE13
+
+LabelNE12:
+	iconst_1
+
+LabelNE13:
+	iand
+	ldc 5
+
+	; loading of a variable/constant
+	iload 4
+
+	; greater-than statement
+	if_icmpgt LabelGT14
+	iconst_0
+	goto LabelGT15
+
+LabelGT14:
+	iconst_1
+
+LabelGT15:
+	iand
+	ior
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+	ldc 5
+
+	; loading of a variable/constant
+	iload 8
+
+	; greater-than statement
+	if_icmpgt LabelGT16
+	iconst_0
+	goto LabelGT17
+
+LabelGT16:
+	iconst_1
+
+LabelGT17:
+	ldc 3
+	ldc 2
+
+	; less-than statement
+	if_icmplt LabelLT18
+	iconst_0
+	goto LabelLT19
+
+LabelLT18:
+	iconst_1
+
+LabelLT19:
+	iand
+
+	; loading of variable/constant character
+	iload 3
+	ldc 122
+
+	; equals statement
+	if_icmpeq LabelEQ20
+	iconst_0
+	goto LabelEQ21
+
+LabelEQ20:
+	iconst_1
+
+LabelEQ21:
+	ior
+	ifeq ELSE11
+	ldc 18
+	istore 4
+	iload 4
+
+	; pop 1 value from the stack for cleaning up exprthen cleanup
+	pop
+	ldc 8
+	ldc 8
+	iadd
+	goto ENDIF11
+
+ELSE11:
+	ldc 3
+	istore 4
+	iload 4
+
+
+ENDIF11:
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of variable/constant character
+	iload 3
+	dup
+	i2c
+	invokestatic java/lang/String/valueOf(C)Ljava/lang/String;
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+
+
+	; loading of a variable/constant
+	iload 4
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+	ldc 3
+	ldc 8
+
+	; less-than statement
+	if_icmplt LabelLT22
+	iconst_0
+	goto LabelLT23
+
+LabelLT22:
+	iconst_1
+
+LabelLT23:
+	ifeq ELSE12
+	ldc 5
+
+	; loading of a variable/constant
+	iload 8
+
+	; equals statement
+	if_icmpeq LabelEQ24
+	iconst_0
+	goto LabelEQ25
+
+LabelEQ24:
+	iconst_1
+
+LabelEQ25:
+	istore 5
+	iload 5
+	goto ENDIF12
+
+ELSE12:
+	ldc 0
+	goto ENDIF12
+
+
+ENDIF12:
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of a variable/constant
+	iload 5
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+	ldc 0
+	istore 4
+	iload 4
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+
+WHILE26:
+	; loading of a variable/constant
+	iload 4
+	ldc 10
+
+	; less-than statement
+	if_icmplt LabelLT27
+	iconst_0
+	goto LabelLT28
+
+LabelLT27:
+	iconst_1
+
+LabelLT28:
+	ifeq ENDWHILE26
+
+	; loading of a variable/constant
+	iload 4
+	ldc 1
+	iadd
+	istore 4
+	iload 4
+
+	; pop 1 value from the stack for cleaning up exprdo cleanup
+	pop
+	ldc 15
+
+	; loading of a variable/constant
+	iload 4
+	idiv
+
+	; loading of a variable/constant
+	iload 8
+	iadd
+	istore 8
+	iload 8
+
+	; pop 1 value from the stack for cleaning up exprdo cleanup
+	pop
+	goto WHILE26
+
+
+ENDWHILE26:
+	; loading of a variable/constant
+	iload 4
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; loading of a variable/constant
+	iload 8
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+	ldc 1
+	istore 5
+	iload 5
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of a variable/constant
+	iload 5
+	ifeq ELSE13
+
+
+WHILE29:
+	; loading of a variable/constant
+	iload 4
+	ldc 0
+
+	; greater-than statement
+	if_icmpgt LabelGT30
+	iconst_0
+	goto LabelGT31
+
+LabelGT30:
+	iconst_1
+
+LabelGT31:
+
+	; loading of a variable/constant
+	iload 5
+	iand
+	ifeq ENDWHILE29
+
+	; loading of a variable/constant
+	iload 4
+	ldc 1
+	isub
+	istore 4
+	iload 4
+
+	; pop 1 value from the stack for cleaning up exprdo cleanup
+	pop
+
+	; loading of a variable/constant
+	iload 4
+	ldc 2
+	irem
+	ldc 0
+
+	; equals statement
+	if_icmpeq LabelEQ32
+	iconst_0
+	goto LabelEQ33
+
+LabelEQ32:
+	iconst_1
+
+LabelEQ33:
+	ifeq ELSE51
+	ldc 5
+
+	; loading of a variable/constant
+	iload 4
+	iadd
+	istore 8
+	iload 8
+	goto ENDIF51
+
+ELSE51:
+	ldc 8
+
+	; loading of a variable/constant
+	iload 4
+	isub
+	ldc 0
+
+	; greater-than statement
+	if_icmpgt LabelGT34
+	iconst_0
+	goto LabelGT35
+
+LabelGT34:
+	iconst_1
+
+LabelGT35:
+	ifeq ELSE71
+	ldc 10
+	istore 8
+	iload 8
+	goto ENDIF71
+
+ELSE71:
+	ldc 13
+
+	; loading of a variable/constant
+	iload 8
+	isub
+
+ENDIF71:
+	goto ENDIF51
+
+
+ENDIF51:
+	; pop 1 value from the stack for cleaning up exprdo cleanup
+	pop
+	goto WHILE29
+
+ENDWHILE29:
+	ldc 8
+
+	; loading of a variable/constant
+	iload 4
+	imul
+	ldc 7
+	irem
+	goto ENDIF13
+
+ELSE13:
+	ldc 6
+	istore 8
+	iload 8
+
+ENDIF13:
+	istore 4
+	iload 4
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of a variable/constant
+	iload 4
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; loading of a variable/constant
+	iload 8
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+	ldc 0
+	istore 9
+	ldc 16
+	istore 9
+	iload 9
+
+	; pop 1 value from the stack for cleaning up indent dsb cleanup
+	pop
+
+	; loading of a variable/constant
+	iload 9
+	ldc 9
+	irem
+	ldc 1
+	isub
+	istore 4
+	iload 4
+
+	; pop 1 value from the stack for cleaning up indent dsb cleanup
+	pop
+
+	; loading of a variable/constant
+	iload 4
+	ldc 3
+	iadd
+	istore 8
+	iload 8
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of a variable/constant
+	iload 8
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+	getstatic java/lang/System/in Ljava/io/InputStream;
+	invokevirtual java/io/InputStream/read()I
+	istore 3
+	iload 3
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of variable/constant character
+	iload 3
+	dup
+	i2c
+	invokestatic java/lang/String/valueOf(C)Ljava/lang/String;
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+	invokestatic Test_two.readint()I
+	istore 4
+	iload 4
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of a variable/constant
+	iload 4
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+	invokestatic Test_two.readint()I
+	istore 5
+	iload 5
+	invokestatic Test_two.readint()I
+	istore 4
+	iload 4
+
+	; pop 2 values from the stack for cleaning up read
+	pop
+	pop
+
+	; loading of a variable/constant
+	iload 5
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; loading of a variable/constant
+	iload 4
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+	invokestatic Test_two.readint()I
+	istore 8
+	iload 8
+	ldc 1
+	isub
+	istore 4
+	iload 4
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of a variable/constant
+	iload 4
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; loading of a variable/constant
+	iload 8
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+	ldc 15
+	ldc 3
+	ldc 2
+	ineg
+	imul
+	isub
+	ldc 7
+	ldc 4
+	irem
+	iadd
+	istore 4
+	iload 4
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+	ldc 100
+	dup
+	i2c
+	invokestatic java/lang/String/valueOf(C)Ljava/lang/String;
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+
+	ldc 111
+	dup
+	i2c
+	invokestatic java/lang/String/valueOf(C)Ljava/lang/String;
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+
+
+	; pop 2 values from the stack for cleaning up print
+	pop
+	pop
+	ldc 110
+	dup
+	i2c
+	invokestatic java/lang/String/valueOf(C)Ljava/lang/String;
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+
+
+	; pop 1 value from the stack for cleaning up print
+	pop
+	ldc 101
+	dup
+	i2c
+	invokestatic java/lang/String/valueOf(C)Ljava/lang/String;
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+
+
+	; pop 1 value from the stack for cleaning up print
+	pop
+
+
+	; 'end' of generated code
+	return
+.end method
+	
+; int readint() function
+.method public static readint()I
+	.limit locals 2
+	.limit stack 10
+	ldc 0
+	istore 0
+
+LabelRead0:
+	getstatic java/lang/System/in Ljava/io/InputStream;
+	invokevirtual java/io/InputStream/read()I
+	istore 1
+	iload 1
+	ldc 10
+	isub
+	ifeq LabelRead1
+	iload 1
+	ldc 13
+	isub
+	ifeq LabelRead1
+	iload 1
+	ldc 32
+	isub
+	ifeq LabelRead1
+	iload 1
+	ldc 48
+	isub
+	ldc 10
+	iload 0
+	imul
+	iadd
+	istore 0
+	goto LabelRead0
+
+LabelRead1:
+	; local variable 0 holds the read integer
+	iload 0
+	ireturn
+	
+.end method

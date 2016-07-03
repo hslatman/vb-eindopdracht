@@ -1,0 +1,4 @@
+// do without while before it
+do
+	2-6;
+od;

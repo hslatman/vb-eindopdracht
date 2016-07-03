@@ -1,0 +1,121 @@
+// ____________________________________________
+
+// DECLARATIONS
+// Constants
+const cc := 'p';
+const ic := 5;
+const bc := true;
+print(cc,ic,bc);
+
+// Variables
+var cv: char;
+var iv: int;
+var bv: bool;
+print(cv,iv,bv);
+
+// Use assignments in constant declaration
+const ic2 := 3+ic*2;
+const bc2 := !bc || iv < 2;
+print(ic2,bc2);
+
+// ____________________________________________
+
+// ASSIGNMENTS
+cv := 'r';
+iv := 3;
+bv := false;
+print(cv,iv,bv);
+
+// Multiple assignment
+var iv2: int;
+iv := iv2 := 6;
+print(iv2,iv);
+
+// Expressions in assignments
+iv := 2+3*ic-iv;
+bv := 10>iv && bc;
+print(iv,bv);
+
+// Print in assignment
+cv := print('z');
+iv := print(iv2)+1;
+bv := !print(true);
+print(cv,iv,bv);
+
+// ____________________________________________
+
+// EXPRESSIONS
+// Unary symbols combined with +, -, *, /, %
+print(+16+2*-8/2+19%3);
+
+// Less than , greater than, equal to, not equal to
+print(5<3 && iv == iv2 || iv >= 4 || 8<=iv2 && iv2 != 10 && 5>iv);
+
+// If-expression
+if 5>iv2 && 3<2 || cv == 'z'; then iv := 18; 8+8; else iv := 3; fi;
+print(cv,iv);
+
+// If-expression without else part
+if 3<8; then bv := 5==iv2; fi;
+print(bv);
+
+iv := 0;
+// While-expression
+while iv < 10; do iv := iv + 1; iv2 := 15/iv + iv2; od;
+print(iv, iv2);
+
+bv := true;
+// Assign if-statement to variable and use nested if- and while-expressions
+iv := if bv; then
+	while iv > 0 && bv; do
+		iv := iv-1;
+		if iv%2 == 0; then 
+			iv2 := 5+iv;
+		else 
+			if 8-iv > 0; then
+				iv2 := 10;
+			else
+				13-iv2;
+			fi;
+		fi;
+	od;
+	8*iv%7;
+else
+	iv2 := 6;
+fi;
+print(iv,iv2);
+
+// Decl_stat_blocks
+iv2 := {var temp: int; {temp:=16; iv:=temp%9-1;}; iv + 3;};
+print(iv2);
+
+// ____________________________________________
+
+// READ
+read(cv);
+print(cv);
+read(iv);
+print(iv);
+read(bv, iv);
+print(bv,iv);
+
+// Read in assignment
+iv := read(iv2)-1;
+print(iv,iv2);
+
+// ____________________________________________
+
+// PRINT
+print(iv:=15-3*-2+7%4);
+print('d','o','n','e');
+
+
+
+
+
+
+
+
+
+
+

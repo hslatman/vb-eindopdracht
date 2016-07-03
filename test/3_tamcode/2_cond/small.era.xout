@@ -1,0 +1,39 @@
+           PUSH         1              ; push variable b on the stack
+           LOADL        0              ; load init value of b
+           STORE(1)     0[SB]          ; store in variable b
+           PUSH         1              ; push variable c on the stack
+           LOADL        0              ; load init value of c
+           STORE(1)     1[SB]          ; store in variable c
+           PUSH         1              ; push variable d on the stack
+           LOADL        0              ; load init value of d
+           STORE(1)     2[SB]          ; store in variable d
+           LOADL        2              ; load literal value 2
+           STORE(1)     1[SB]          ; store in variable c
+           LOAD(1)      1[SB]          ; load the variable c on the stack
+           POP(0)       1              ; pop the resulting value of if cleanup start
+           LOADL        3              ; load literal value 3
+           STORE(1)     2[SB]          ; store in variable d
+           LOAD(1)      2[SB]          ; load the variable d on the stack
+           POP(0)       1              ; pop the resulting value of if cleanup start
+           LOAD(1)      1[SB]          ; load the variable c
+           LOAD(1)      2[SB]          ; load the variable d
+           LOADL        1              ; load literal value 1 
+           CALL         ne             ; not equals statement
+           JUMPIF(0)    ELSE11[CB]     ; jump to the else clause
+           LOADL        100            ; load literal value 100
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           JUMP         ENDIF11[CB]    ; jump past the else clause
+ELSE11:    LOADL        200            ; load literal value 200
+           POP(1)       0              ; pop 0 local variables on closing a scope
+ENDIF11:   POP(1)       2              ; pop 2 local variables on closing a scope
+           STORE(1)     0[SB]          ; store in variable b
+           LOAD(1)      0[SB]          ; load the variable b on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      0[SB]          ; load the variable b
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           POP(0)       1              ; free 1 variables at end of program
+           HALT                        ; ends the program

@@ -1,0 +1,89 @@
+
+.source Basic.jasm
+.class public Basic
+.super java/lang/Object
+
+; standard class initializer
+.method public <init>()V
+	aload_0
+	invokenonvirtual java/lang/Object/<init>()V
+	return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+	.limit locals 2
+	.limit stack 10
+
+
+	; 'start' of generated code
+
+	ldc 0
+	istore 0
+	ldc 0
+	istore 1
+	ldc 3
+	istore 0
+	iload 0
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+	ldc 4
+	istore 1
+	iload 1
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of a variable/constant
+	iload 0
+
+	; loading of a variable/constant
+	iload 1
+
+	; not-equals statement
+	if_icmpne LabelNE0
+	iconst_0
+	goto LabelNE1
+
+LabelNE0:
+	iconst_1
+
+LabelNE1:
+	ifeq ELSE11
+
+	; loading of a variable/constant
+	iload 0
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+	goto ENDIF11
+
+
+ELSE11:
+	; loading of a variable/constant
+	iload 1
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+
+ENDIF11:
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+
+	; 'end' of generated code
+	return
+.end method

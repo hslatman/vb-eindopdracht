@@ -1,0 +1,3 @@
+// assign no type (or void) to variable
+var i: int;
+i := print(5,4);

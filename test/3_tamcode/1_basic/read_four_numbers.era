@@ -1,0 +1,8 @@
+var a: int;
+var b: int;
+var c: int;
+var d: int;
+
+read(a,b,c,d);
+
+print(d,c,b,a);

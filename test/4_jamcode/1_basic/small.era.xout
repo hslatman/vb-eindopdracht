@@ -1,0 +1,193 @@
+
+.source Small.jasm
+.class public Small
+.super java/lang/Object
+
+; standard class initializer
+.method public <init>()V
+	aload_0
+	invokenonvirtual java/lang/Object/<init>()V
+	return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+	.limit locals 2
+	.limit stack 27
+
+
+	; 'start' of generated code
+
+	ldc 0
+	istore 0
+
+	; loading of a variable/constant
+	iload 0
+	ldc 0
+
+	; equals statement
+	if_icmpeq LabelEQ0
+	iconst_0
+	goto LabelEQ1
+
+LabelEQ0:
+	iconst_1
+
+LabelEQ1:
+	ifeq ELSE31
+	ldc 1
+	goto ENDIF31
+
+ELSE31:
+	ldc 0
+
+ENDIF31:
+	ifeq ELSE11
+
+	; loading of a variable/constant
+	iload 0
+	ldc 0
+
+	; not-equals statement
+	if_icmpne LabelNE2
+	iconst_0
+	goto LabelNE3
+
+LabelNE2:
+	iconst_1
+
+LabelNE3:
+	ifeq ELSE41
+
+	; loading of a variable/constant
+	iload 0
+	ldc 0
+
+	; not-equals statement
+	if_icmpne LabelNE4
+	iconst_0
+	goto LabelNE5
+
+LabelNE4:
+	iconst_1
+
+LabelNE5:
+	ifeq ELSE71
+	ldc 31339
+	goto ENDIF71
+
+ELSE71:
+	ldc 31340
+
+ENDIF71:
+	goto ENDIF41
+
+
+ELSE41:
+	; loading of a variable/constant
+	iload 0
+	ldc 0
+
+	; not-equals statement
+	if_icmpne LabelNE6
+	iconst_0
+	goto LabelNE7
+
+LabelNE6:
+	iconst_1
+
+LabelNE7:
+	ifeq ELSE72
+	ldc 31338
+	goto ENDIF72
+
+ELSE72:
+	ldc 0
+	istore 1
+	ldc 3
+	istore 1
+	iload 1
+
+	; pop 1 value from the stack for cleaning up exprelse cleanup
+	pop
+
+
+WHILE8:
+	; loading of a variable/constant
+	iload 1
+	ldc 10
+
+	; less-than statement
+	if_icmplt LabelLT9
+	iconst_0
+	goto LabelLT10
+
+LabelLT9:
+	iconst_1
+
+LabelLT10:
+	ifeq ENDWHILE8
+
+	; loading of a variable/constant
+	iload 1
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 1 value from the stack for cleaning up exprdo cleanup
+	pop
+
+	; loading of a variable/constant
+	iload 1
+	ldc 1
+	iadd
+	istore 1
+	iload 1
+
+	; pop 1 value from the stack for cleaning up exprdo cleanup
+	pop
+	goto WHILE8
+
+ENDWHILE8:
+	ldc 31337
+
+ENDIF72:
+	goto ENDIF41
+
+ENDIF41:
+	goto ENDIF11
+
+ELSE11:
+	ldc 40
+
+ENDIF11:
+	istore 0
+	iload 0
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+	; loading of a variable/constant
+	iload 0
+	dup
+
+	; push reference to system.out on stack
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	swap
+
+	; print the output
+	invokevirtual java/io/PrintStream/println(I)V
+
+
+	; pop 1 value from the stack for cleaning up dsb cleanup start
+	pop
+
+
+	; 'end' of generated code
+	return
+.end method

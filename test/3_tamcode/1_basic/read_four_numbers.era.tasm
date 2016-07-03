@@ -1,0 +1,52 @@
+           PUSH         1              ; push variable a on the stack
+           LOADL        0              ; load init value of a
+           STORE(1)     0[SB]          ; store in variable a
+           PUSH         1              ; push variable b on the stack
+           LOADL        0              ; load init value of b
+           STORE(1)     1[SB]          ; store in variable b
+           PUSH         1              ; push variable c on the stack
+           LOADL        0              ; load init value of c
+           STORE(1)     2[SB]          ; store in variable c
+           PUSH         1              ; push variable d on the stack
+           LOADL        0              ; load init value of d
+           STORE(1)     3[SB]          ; store in variable d
+           LOADA        0[SB]          ; load the address of a
+           CALL         getint         ; read a numeric value for a
+           LOAD(1)      0[SB]          ; load the variable a
+           LOADA        1[SB]          ; load the address of b
+           CALL         getint         ; read a numeric value for b
+           LOAD(1)      1[SB]          ; load the variable b
+           POP(0)       2              ; pop the resulting value of read
+           LOADA        2[SB]          ; load the address of c
+           CALL         getint         ; read a numeric value for c
+           LOAD(1)      2[SB]          ; load the variable c
+           POP(0)       1              ; pop the resulting value of read
+           LOADA        3[SB]          ; load the address of d
+           CALL         getint         ; read a numeric value for d
+           LOAD(1)      3[SB]          ; load the variable d
+           POP(0)       1              ; pop the resulting value of read
+           LOAD(1)      3[SB]          ; load the variable d
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           LOAD(1)      2[SB]          ; load the variable c
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOAD(1)      1[SB]          ; load the variable b
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of print
+           LOAD(1)      0[SB]          ; load the variable a
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of print
+           POP(0)       4              ; free 4 variables at end of program
+           HALT                        ; ends the program

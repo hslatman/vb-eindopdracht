@@ -1,0 +1,3 @@
+// assignment without ending semicolon
+var i: int;
+i := 5

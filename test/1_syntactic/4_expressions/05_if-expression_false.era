@@ -1,0 +1,6 @@
+// no ending semicolon
+if 5<6; then
+	3+1;
+else
+	3+2;
+fi

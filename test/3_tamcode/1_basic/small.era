@@ -1,0 +1,34 @@
+var a : int;
+
+a := if {if a == 0; then true; else false; fi;}; then {
+
+	if a != 0; then {
+	
+		if a != 0; then 31339; else 31340; fi;
+	
+	
+	}; else {
+	
+		if a != 0; then 31338; else 
+		
+			var b : int;
+			b := 3;
+			
+			while b < 10; do
+				print(b);
+				b := b + 1;
+			od;
+			
+			31337;
+		
+		
+		 fi;
+	
+	
+	}; fi;
+
+
+}; else 40; fi;
+
+print(a);
+

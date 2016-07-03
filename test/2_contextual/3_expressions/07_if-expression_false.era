@@ -1,0 +1,3 @@
+// assign if-expr. to variable when then- or else-part returns void
+var i: int;
+i := if true; then print(5,'a'); else 5; fi;

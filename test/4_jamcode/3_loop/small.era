@@ -1,0 +1,12 @@
+var b: int;
+
+var c: int;
+c := 10;
+
+b := 0;
+
+while (b < c); do
+	b := print(b) + 1;
+od;
+
+print('d','o','n','e');

@@ -1,0 +1,2 @@
+// assign to undeclared variable
+i := 5;

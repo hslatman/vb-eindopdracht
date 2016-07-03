@@ -1,0 +1,4 @@
+// use expression as condition that doesn't return a boolean
+while 5; do
+	2+2;
+od;

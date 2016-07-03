@@ -1,0 +1,7 @@
+
+
+var b: int;
+
+b := if var c: int; var d: int; c := 2; d := 3; c != d; then 100; else 200; fi;
+
+print(b);

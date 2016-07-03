@@ -1,0 +1,6 @@
+// no semicolons in condition
+if 3==2 then
+	3+6;
+else
+	2-1;
+fi;

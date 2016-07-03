@@ -1,0 +1,3 @@
+// assign if-expr. to variable when else-part is not present
+var i: int;
+i := if true; then 3; fi;

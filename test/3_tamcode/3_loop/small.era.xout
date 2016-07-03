@@ -1,0 +1,56 @@
+           PUSH         1              ; push variable b on the stack
+           LOADL        0              ; load init value of b
+           STORE(1)     0[SB]          ; store in variable b
+           PUSH         1              ; push variable c on the stack
+           LOADL        0              ; load init value of c
+           STORE(1)     1[SB]          ; store in variable c
+           LOADL        10             ; load literal value 10
+           STORE(1)     1[SB]          ; store in variable c
+           LOAD(1)      1[SB]          ; load the variable c on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOADL        0              ; load literal value 0
+           STORE(1)     0[SB]          ; store in variable b
+           LOAD(1)      0[SB]          ; load the variable b on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+WHILE0:    LOAD(1)      0[SB]          ; load the variable b
+           LOAD(1)      1[SB]          ; load the variable c
+           CALL         lt             ; less than statement
+           JUMPIF(0)    ENDWHILE0[CB]  ; jump past the while body
+           LOAD(1)      0[SB]          ; load the variable b
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           LOADL        1              ; load literal value 1
+           CALL         add            ; add up the entries on the top of the stack
+           STORE(1)     0[SB]          ; store in variable b
+           LOAD(1)      0[SB]          ; load the variable b on the stack
+           POP(0)       1              ; pop the resulting value of exprdo cleanup
+           POP(0)       0              ; pop 0 local variables on closing a scope
+           JUMP         WHILE0[CB]     ; jump to the while
+ENDWHILE0: POP(0)       0              ; pop 0 local variables on closing a scope
+           LOADL        100            ; load literal value 100 representing 'd'
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           LOADL        111            ; load literal value 111 representing 'o'
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOADL        110            ; load literal value 110 representing 'n'
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of print
+           LOADL        101            ; load literal value 101 representing 'e'
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of print
+           POP(0)       2              ; free 2 variables at end of program
+           HALT                        ; ends the program

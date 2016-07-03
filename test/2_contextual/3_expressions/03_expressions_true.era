@@ -1,0 +1,3 @@
+// use declared but never initialized variable
+var i: int;
+i < 5;

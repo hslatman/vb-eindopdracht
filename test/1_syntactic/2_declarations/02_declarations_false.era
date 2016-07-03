@@ -1,0 +1,3 @@
+// declaring nonexistant type
+var i: butterfly;
+x := 1;

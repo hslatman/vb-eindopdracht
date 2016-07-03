@@ -1,0 +1,2 @@
+// test different types with each other
+5 < 'a';

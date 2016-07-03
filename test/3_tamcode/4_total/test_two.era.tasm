@@ -1,0 +1,557 @@
+; source file: C:\Users\Martijn\VBworkspace\VertalerbouwEindopdracht\test\3_tamcode\4_total\test_two.era
+; output file: C:\Users\Martijn\VBworkspace\VertalerbouwEindopdracht\test\3_tamcode\4_total\test_two.era.tasm
+; creation date: Sat Jul 06 23:01:00 CEST 2013
+
+           PUSH         1              ; push constant cc on the stack - constants need to be here too :-(
+           LOADL        112            ; load literal value 112 representing 'p'
+           STORE(1)     0[SB]          ; store in variable cc
+           PUSH         1              ; push constant ic on the stack - constants need to be here too :-(
+           LOADL        5              ; load literal value 5
+           STORE(1)     1[SB]          ; store in variable ic
+           PUSH         1              ; push constant bc on the stack - constants need to be here too :-(
+           LOADL        1              ; load literal value 1
+           STORE(1)     2[SB]          ; store in variable bc
+           LOAD(1)      0[SB]          ; load the constant cc
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           LOAD(1)      1[SB]          ; load the constant ic
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOAD(1)      2[SB]          ; load the constant bc
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of print
+           PUSH         1              ; push variable cv on the stack
+           LOADL        97             ; load init value of cv
+           STORE(1)     3[SB]          ; store in variable cv
+           PUSH         1              ; push variable iv on the stack
+           LOADL        0              ; load init value of iv
+           STORE(1)     4[SB]          ; store in variable iv
+           PUSH         1              ; push variable bv on the stack
+           LOADL        0              ; load init value of bv
+           STORE(1)     5[SB]          ; store in variable bv
+           LOAD(1)      3[SB]          ; load the variable cv
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOAD(1)      5[SB]          ; load the variable bv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of print
+           PUSH         1              ; push constant ic2 on the stack - constants need to be here too :-(
+           LOADL        3              ; load literal value 3
+           LOAD(1)      1[SB]          ; load the constant ic
+           LOADL        2              ; load literal value 2
+           CALL         mult           ; multiplication of the top entries on the stack
+           CALL         add            ; add up the entries on the top of the stack
+           STORE(1)     6[SB]          ; store in variable ic2
+           PUSH         1              ; push constant bc2 on the stack - constants need to be here too :-(
+           LOAD(1)      2[SB]          ; load the constant bc
+           CALL         not            ; negate the statement
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADL        2              ; load literal value 2
+           CALL         lt             ; less than statement
+           CALL         or             ; or the values on the top of the stack with eachother
+           STORE(1)     7[SB]          ; store in variable bc2
+           LOAD(1)      6[SB]          ; load the constant ic2
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           LOAD(1)      7[SB]          ; load the constant bc2
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOADL        114            ; load literal value 114 representing 'r'
+           STORE(1)     3[SB]          ; store in variable cv
+           LOAD(1)      3[SB]          ; load the variable cv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOADL        3              ; load literal value 3
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOADL        0              ; load literal value 0
+           STORE(1)     5[SB]          ; store in variable bv
+           LOAD(1)      5[SB]          ; load the variable bv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      3[SB]          ; load the variable cv
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOAD(1)      5[SB]          ; load the variable bv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of print
+           PUSH         1              ; push variable iv2 on the stack
+           LOADL        0              ; load init value of iv2
+           STORE(1)     8[SB]          ; store in variable iv2
+           LOADL        6              ; load literal value 6
+           STORE(1)     8[SB]          ; store in variable iv2
+           LOAD(1)      8[SB]          ; load the variable iv2 on the stack
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      8[SB]          ; load the variable iv2
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOADL        2              ; load literal value 2
+           LOADL        3              ; load literal value 3
+           LOAD(1)      1[SB]          ; load the constant ic
+           CALL         mult           ; multiplication of the top entries on the stack
+           CALL         add            ; add up the entries on the top of the stack
+           LOAD(1)      4[SB]          ; load the variable iv
+           CALL         sub            ; subtract the top entries of the stack from eachother
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOADL        10             ; load literal value 10
+           LOAD(1)      4[SB]          ; load the variable iv
+           CALL         gt             ; greater than statement
+           LOAD(1)      2[SB]          ; load the constant bc
+           CALL         and            ; and the values on the top of the stack with eachother
+           STORE(1)     5[SB]          ; store in variable bv
+           LOAD(1)      5[SB]          ; load the variable bv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           LOAD(1)      5[SB]          ; load the variable bv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOADL        122            ; load literal value 122 representing 'z'
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           STORE(1)     3[SB]          ; store in variable cv
+           LOAD(1)      3[SB]          ; load the variable cv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      8[SB]          ; load the variable iv2
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           LOADL        1              ; load literal value 1
+           CALL         add            ; add up the entries on the top of the stack
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOADL        1              ; load literal value 1
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           CALL         not            ; negate the statement
+           STORE(1)     5[SB]          ; store in variable bv
+           LOAD(1)      5[SB]          ; load the variable bv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      3[SB]          ; load the variable cv
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOAD(1)      5[SB]          ; load the variable bv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of print
+           LOADL        16             ; load literal value 16
+           LOADL        2              ; load literal value 2
+           LOADL        8              ; load literal value 8
+           LOADL        -1             ; load literal value -1 
+           CALL         mult           ; multiply top of the stack with -1
+           CALL         mult           ; multiplication of the top entries on the stack
+           LOADL        2              ; load literal value 2
+           CALL         div            ; division of the top entries on the stack
+           CALL         add            ; add up the entries on the top of the stack
+           LOADL        19             ; load literal value 19
+           LOADL        3              ; load literal value 3
+           CALL         mod            ; modulus of the two top entries on the stack
+           CALL         add            ; add up the entries on the top of the stack
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOADL        5              ; load literal value 5
+           LOADL        3              ; load literal value 3
+           CALL         lt             ; less than statement
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOAD(1)      8[SB]          ; load the variable iv2
+           LOADL        1              ; load literal value 1 
+           CALL         eq             ; equals statement
+           CALL         and            ; and the values on the top of the stack with eachother
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADL        4              ; load literal value 4
+           CALL         ge             ; greater or equal statement
+           CALL         or             ; or the values on the top of the stack with eachother
+           LOADL        8              ; load literal value 8
+           LOAD(1)      8[SB]          ; load the variable iv2
+           CALL         le             ; less or equal statement
+           LOAD(1)      8[SB]          ; load the variable iv2
+           LOADL        10             ; load literal value 10
+           LOADL        1              ; load literal value 1 
+           CALL         ne             ; not equals statement
+           CALL         and            ; and the values on the top of the stack with eachother
+           LOADL        5              ; load literal value 5
+           LOAD(1)      4[SB]          ; load the variable iv
+           CALL         gt             ; greater than statement
+           CALL         and            ; and the values on the top of the stack with eachother
+           CALL         or             ; or the values on the top of the stack with eachother
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOADL        5              ; load literal value 5
+           LOAD(1)      8[SB]          ; load the variable iv2
+           CALL         gt             ; greater than statement
+           LOADL        3              ; load literal value 3
+           LOADL        2              ; load literal value 2
+           CALL         lt             ; less than statement
+           CALL         and            ; and the values on the top of the stack with eachother
+           LOAD(1)      3[SB]          ; load the variable cv
+           LOADL        122            ; load literal value 122 representing 'z'
+           LOADL        1              ; load literal value 1 
+           CALL         eq             ; equals statement
+           CALL         or             ; or the values on the top of the stack with eachother
+           JUMPIF(0)    ELSE11[CB]     ; jump to the else clause
+           LOADL        18             ; load literal value 18
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           POP(0)       1              ; pop the resulting value of exprthen cleanup
+           LOADL        8              ; load literal value 8
+           LOADL        8              ; load literal value 8
+           CALL         add            ; add up the entries on the top of the stack
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           JUMP         ENDIF11[CB]    ; jump past the else clause
+ELSE11:    LOADL        3              ; load literal value 3
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           POP(1)       0              ; pop 0 local variables on closing a scope
+ENDIF11:   POP(1)       0              ; pop 0 local variables on closing a scope
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      3[SB]          ; load the variable cv
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOADL        3              ; load literal value 3
+           LOADL        8              ; load literal value 8
+           CALL         lt             ; less than statement
+           JUMPIF(0)    ELSE12[CB]     ; jump to the else clause
+           LOADL        5              ; load literal value 5
+           LOAD(1)      8[SB]          ; load the variable iv2
+           LOADL        1              ; load literal value 1 
+           CALL         eq             ; equals statement
+           STORE(1)     5[SB]          ; store in variable bv
+           LOAD(1)      5[SB]          ; load the variable bv on the stack
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           JUMP         ENDIF12[CB]    ; jump past the else clause
+ELSE12:    JUMP         ENDIF12[CB]    ; jump to the end
+ENDIF12:   POP(1)       0              ; pop 0 local variables on closing a scope
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      5[SB]          ; load the variable bv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOADL        0              ; load literal value 0
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+WHILE0:    LOAD(1)      4[SB]          ; load the variable iv
+           LOADL        10             ; load literal value 10
+           CALL         lt             ; less than statement
+           JUMPIF(0)    ENDWHILE0[CB]  ; jump past the while body
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADL        1              ; load literal value 1
+           CALL         add            ; add up the entries on the top of the stack
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           POP(0)       1              ; pop the resulting value of exprdo cleanup
+           LOADL        15             ; load literal value 15
+           LOAD(1)      4[SB]          ; load the variable iv
+           CALL         div            ; division of the top entries on the stack
+           LOAD(1)      8[SB]          ; load the variable iv2
+           CALL         add            ; add up the entries on the top of the stack
+           STORE(1)     8[SB]          ; store in variable iv2
+           LOAD(1)      8[SB]          ; load the variable iv2 on the stack
+           POP(0)       1              ; pop the resulting value of exprdo cleanup
+           POP(0)       0              ; pop 0 local variables on closing a scope
+           JUMP         WHILE0[CB]     ; jump to the while
+ENDWHILE0: POP(0)       0              ; pop 0 local variables on closing a scope
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           LOAD(1)      8[SB]          ; load the variable iv2
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOADL        1              ; load literal value 1
+           STORE(1)     5[SB]          ; store in variable bv
+           LOAD(1)      5[SB]          ; load the variable bv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      5[SB]          ; load the variable bv
+           JUMPIF(0)    ELSE13[CB]     ; jump to the else clause
+WHILE1:    LOAD(1)      4[SB]          ; load the variable iv
+           LOADL        0              ; load literal value 0
+           CALL         gt             ; greater than statement
+           LOAD(1)      5[SB]          ; load the variable bv
+           CALL         and            ; and the values on the top of the stack with eachother
+           JUMPIF(0)    ENDWHILE1[CB]  ; jump past the while body
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADL        1              ; load literal value 1
+           CALL         sub            ; subtract the top entries of the stack from eachother
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           POP(0)       1              ; pop the resulting value of exprdo cleanup
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADL        2              ; load literal value 2
+           CALL         mod            ; modulus of the two top entries on the stack
+           LOADL        0              ; load literal value 0
+           LOADL        1              ; load literal value 1 
+           CALL         eq             ; equals statement
+           JUMPIF(0)    ELSE51[CB]     ; jump to the else clause
+           LOADL        5              ; load literal value 5
+           LOAD(1)      4[SB]          ; load the variable iv
+           CALL         add            ; add up the entries on the top of the stack
+           STORE(1)     8[SB]          ; store in variable iv2
+           LOAD(1)      8[SB]          ; load the variable iv2 on the stack
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           JUMP         ENDIF51[CB]    ; jump past the else clause
+ELSE51:    LOADL        8              ; load literal value 8
+           LOAD(1)      4[SB]          ; load the variable iv
+           CALL         sub            ; subtract the top entries of the stack from eachother
+           LOADL        0              ; load literal value 0
+           CALL         gt             ; greater than statement
+           JUMPIF(0)    ELSE71[CB]     ; jump to the else clause
+           LOADL        10             ; load literal value 10
+           STORE(1)     8[SB]          ; store in variable iv2
+           LOAD(1)      8[SB]          ; load the variable iv2 on the stack
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           JUMP         ENDIF71[CB]    ; jump past the else clause
+ELSE71:    LOADL        13             ; load literal value 13
+           LOAD(1)      8[SB]          ; load the variable iv2
+           CALL         sub            ; subtract the top entries of the stack from eachother
+           POP(1)       0              ; pop 0 local variables on closing a scope
+ENDIF71:   POP(1)       0              ; pop 0 local variables on closing a scope
+           POP(1)       0              ; pop 0 local variables on closing a scope
+ENDIF51:   POP(1)       0              ; pop 0 local variables on closing a scope
+           POP(0)       1              ; pop the resulting value of exprdo cleanup
+           POP(0)       0              ; pop 0 local variables on closing a scope
+           JUMP         WHILE1[CB]     ; jump to the while
+ENDWHILE1: POP(0)       0              ; pop 0 local variables on closing a scope
+           LOADL        8              ; load literal value 8
+           LOAD(1)      4[SB]          ; load the variable iv
+           CALL         mult           ; multiplication of the top entries on the stack
+           LOADL        7              ; load literal value 7
+           CALL         mod            ; modulus of the two top entries on the stack
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           JUMP         ENDIF13[CB]    ; jump past the else clause
+ELSE13:    LOADL        6              ; load literal value 6
+           STORE(1)     8[SB]          ; store in variable iv2
+           LOAD(1)      8[SB]          ; load the variable iv2 on the stack
+           POP(1)       0              ; pop 0 local variables on closing a scope
+ENDIF13:   POP(1)       0              ; pop 0 local variables on closing a scope
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           LOAD(1)      8[SB]          ; load the variable iv2
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           PUSH         1              ; push variable temp on the stack
+           LOADL        0              ; load init value of temp
+           STORE(1)     9[SB]          ; store in variable temp
+           LOADL        16             ; load literal value 16
+           STORE(1)     9[SB]          ; store in variable temp
+           LOAD(1)      9[SB]          ; load the variable temp on the stack
+           POP(0)       1              ; pop the resulting value of indent dsb cleanup
+           LOAD(1)      9[SB]          ; load the variable temp
+           LOADL        9              ; load literal value 9
+           CALL         mod            ; modulus of the two top entries on the stack
+           LOADL        1              ; load literal value 1
+           CALL         sub            ; subtract the top entries of the stack from eachother
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           POP(0)       1              ; pop the resulting value of indent dsb cleanup
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADL        3              ; load literal value 3
+           CALL         add            ; add up the entries on the top of the stack
+           POP(1)       1              ; pop 1 local variables on closing a scope
+           STORE(1)     8[SB]          ; store in variable iv2
+           LOAD(1)      8[SB]          ; load the variable iv2 on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      8[SB]          ; load the variable iv2
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOADA        3[SB]          ; load the address of cv
+           CALL         get            ; get a character value for cv
+           LOAD(1)      3[SB]          ; load the variable cv
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      3[SB]          ; load the variable cv
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOADA        4[SB]          ; load the address of iv
+           CALL         getint         ; read a numeric value for iv
+           LOAD(1)      4[SB]          ; load the variable iv
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOADA        5[SB]          ; load the address of bv
+           CALL         getint         ; read a numeric value for bv
+           LOAD(1)      5[SB]          ; load the variable bv
+           LOADA        4[SB]          ; load the address of iv
+           CALL         getint         ; read a numeric value for iv
+           LOAD(1)      4[SB]          ; load the variable iv
+           POP(0)       2              ; pop the resulting value of read
+           LOAD(1)      5[SB]          ; load the variable bv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOADA        8[SB]          ; load the address of iv2
+           CALL         getint         ; read a numeric value for iv2
+           LOAD(1)      8[SB]          ; load the variable iv2
+           LOADL        1              ; load literal value 1
+           CALL         sub            ; subtract the top entries of the stack from eachother
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      4[SB]          ; load the variable iv
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           LOAD(1)      8[SB]          ; load the variable iv2
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOADL        15             ; load literal value 15
+           LOADL        3              ; load literal value 3
+           LOADL        2              ; load literal value 2
+           LOADL        -1             ; load literal value -1 
+           CALL         mult           ; multiply top of the stack with -1
+           CALL         mult           ; multiplication of the top entries on the stack
+           CALL         sub            ; subtract the top entries of the stack from eachother
+           LOADL        7              ; load literal value 7
+           LOADL        4              ; load literal value 4
+           CALL         mod            ; modulus of the two top entries on the stack
+           CALL         add            ; add up the entries on the top of the stack
+           STORE(1)     4[SB]          ; store in variable iv
+           LOAD(1)      4[SB]          ; load the variable iv on the stack
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOADL        100            ; load literal value 100 representing 'd'
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           LOADL        111            ; load literal value 111 representing 'o'
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           POP(0)       2              ; pop the resulting value of print
+           LOADL        110            ; load literal value 110 representing 'n'
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of print
+           LOADL        101            ; load literal value 101 representing 'e'
+           LOADA        -1[ST]         ; load address of char on top of stack
+           LOADI(1)                    ; get the char on the stack, again, for printing
+           CALL         put            ; print the character 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of print
+           POP(0)       9              ; free 9 variables at end of program
+           HALT                        ; ends the program

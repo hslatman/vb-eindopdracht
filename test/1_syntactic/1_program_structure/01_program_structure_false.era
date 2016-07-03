@@ -1,0 +1,2 @@
+// program shouldn't end in declaration
+var i: int;

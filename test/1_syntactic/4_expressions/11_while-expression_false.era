@@ -1,0 +1,4 @@
+// no ending semicolon
+while 2<3; do
+	2-6;
+od

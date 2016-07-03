@@ -1,0 +1,92 @@
+           PUSH         1              ; push variable a on the stack
+           LOADL        0              ; load init value of a
+           STORE(1)     0[SB]          ; store in variable a
+           LOAD(1)      0[SB]          ; load the variable a
+           LOADL        0              ; load literal value 0
+           LOADL        1              ; load literal value 1 
+           CALL         eq             ; equals statement
+           JUMPIF(0)    ELSE31[CB]     ; jump to the else clause
+           LOADL        1              ; load literal value 1
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           JUMP         ENDIF31[CB]    ; jump past the else clause
+ELSE31:    LOADL        0              ; load literal value 0
+           POP(1)       0              ; pop 0 local variables on closing a scope
+ENDIF31:   POP(1)       0              ; pop 0 local variables on closing a scope
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           JUMPIF(0)    ELSE11[CB]     ; jump to the else clause
+           LOAD(1)      0[SB]          ; load the variable a
+           LOADL        0              ; load literal value 0
+           LOADL        1              ; load literal value 1 
+           CALL         ne             ; not equals statement
+           JUMPIF(0)    ELSE41[CB]     ; jump to the else clause
+           LOAD(1)      0[SB]          ; load the variable a
+           LOADL        0              ; load literal value 0
+           LOADL        1              ; load literal value 1 
+           CALL         ne             ; not equals statement
+           JUMPIF(0)    ELSE71[CB]     ; jump to the else clause
+           LOADL        31339          ; load literal value 31339
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           JUMP         ENDIF71[CB]    ; jump past the else clause
+ELSE71:    LOADL        31340          ; load literal value 31340
+           POP(1)       0              ; pop 0 local variables on closing a scope
+ENDIF71:   POP(1)       0              ; pop 0 local variables on closing a scope
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           JUMP         ENDIF41[CB]    ; jump past the else clause
+ELSE41:    LOAD(1)      0[SB]          ; load the variable a
+           LOADL        0              ; load literal value 0
+           LOADL        1              ; load literal value 1 
+           CALL         ne             ; not equals statement
+           JUMPIF(0)    ELSE72[CB]     ; jump to the else clause
+           LOADL        31338          ; load literal value 31338
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           JUMP         ENDIF72[CB]    ; jump past the else clause
+ELSE72:    PUSH         1              ; push variable b on the stack
+           LOADL        0              ; load init value of b
+           STORE(1)     1[SB]          ; store in variable b
+           LOADL        3              ; load literal value 3
+           STORE(1)     1[SB]          ; store in variable b
+           LOAD(1)      1[SB]          ; load the variable b on the stack
+           POP(0)       1              ; pop the resulting value of exprelse cleanup
+WHILE0:    LOAD(1)      1[SB]          ; load the variable b
+           LOADL        10             ; load literal value 10
+           CALL         lt             ; less than statement
+           JUMPIF(0)    ENDWHILE0[CB]  ; jump past the while body
+           LOAD(1)      1[SB]          ; load the variable b
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of exprdo cleanup
+           LOAD(1)      1[SB]          ; load the variable b
+           LOADL        1              ; load literal value 1
+           CALL         add            ; add up the entries on the top of the stack
+           STORE(1)     1[SB]          ; store in variable b
+           LOAD(1)      1[SB]          ; load the variable b on the stack
+           POP(0)       1              ; pop the resulting value of exprdo cleanup
+           POP(0)       0              ; pop 0 local variables on closing a scope
+           JUMP         WHILE0[CB]     ; jump to the while
+ENDWHILE0: POP(0)       0              ; pop 0 local variables on closing a scope
+           LOADL        31337          ; load literal value 31337
+           POP(1)       1              ; pop 1 local variables on closing a scope
+ENDIF72:   POP(1)       0              ; pop 0 local variables on closing a scope
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           POP(1)       0              ; pop 0 local variables on closing a scope
+ENDIF41:   POP(1)       0              ; pop 0 local variables on closing a scope
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           POP(1)       0              ; pop 0 local variables on closing a scope
+           JUMP         ENDIF11[CB]    ; jump past the else clause
+ELSE11:    LOADL        40             ; load literal value 40
+           POP(1)       0              ; pop 0 local variables on closing a scope
+ENDIF11:   POP(1)       0              ; pop 0 local variables on closing a scope
+           STORE(1)     0[SB]          ; store in variable a
+           LOAD(1)      0[SB]          ; load the variable a on the stack
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           LOAD(1)      0[SB]          ; load the variable a
+           LOADA        -1[ST]         ; load address of int on top of stack
+           LOADI(1)                    ; get the int on the stack, again, for printing
+           CALL         putint         ; print the integer value of 
+           CALL         puteol         ; put a newline
+           POP(0)       1              ; pop the resulting value of dsb cleanup start
+           POP(0)       1              ; free 1 variables at end of program
+           HALT                        ; ends the program

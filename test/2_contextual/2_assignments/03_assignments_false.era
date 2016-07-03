@@ -1,0 +1,3 @@
+// assign code block (decl-stat-block) to variable and check if last line determines return type
+var i: int;
+i := { 1+1; 4*3; 'a'; };

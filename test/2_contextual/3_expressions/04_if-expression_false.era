@@ -1,0 +1,4 @@
+// use expression as condition that doesn't return a boolean
+if 5; then
+	1+1;
+fi;

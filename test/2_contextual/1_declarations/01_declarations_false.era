@@ -1,0 +1,4 @@
+// declare already declared variable
+var i: int;
+var i: bool;
+5 + 5;

@@ -1,0 +1,1 @@
+[CHECKINT ('a' -> 2:4)] ERROR: illegal type found where int was expected!
